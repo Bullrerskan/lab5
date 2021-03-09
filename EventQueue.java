@@ -1,27 +1,42 @@
 package general;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
-
-/* denna kˆ ordnar instoppade h‰ndelser efter ber‰knad tid och
- * ger ut den h‰ndelser som stÂr op tur.
+/* denna k√∂ ordnar instoppade h√§ndelser efter ber√§knad tid och
+ * ger ut den h√§ndelser som st√•r op tur.
  */
 
 public class EventQueue {
 	
-	private ArrayList<Event> queue = new ArrayList<Event>();
-
-	Event nextEvent() {
-		return nextEvent();
-
+	private ArrayList <Event> queue = new ArrayList <Event> ();
+	
+	// l√§gger till event p√• nextEvent.
+	
+	public void nextEvent (Event nextEvent) { 
+		queue.add(nextEvent);
 	}
 
 	void addToQueue(Event e) {
+		queue.add(e);
 
 	}
 
-	void sortQueue( ) {
-
+	void sortQueue () {
+		Collections.sort(queue, new Comparator<Event>() {
+			
+            public int compare(Event firstevent, Event secondevent) {
+            	
+                if (secondevent.getTime() > firstevent.getTime())
+                	return -1;
+                
+                if (secondevent.getTime() > firstevent.getTime()) 
+                	return 1;
+                
+                else return 0;
+            }
+        });	
 	}
 }
 
