@@ -15,6 +15,6 @@ public abstract class Event {
     	this.timeExcecution = time;
     }
     
-    public abstract void runEvent(Simulator state, EventQueue eventQueue);
+    public abstract void excecute(Simulator state, EventQueue eventQueue);
 }
 
