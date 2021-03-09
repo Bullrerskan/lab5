@@ -27,7 +27,7 @@ public double timePassed() { // returnerar tiden som har gått.
 	return timePassed;
 }
 
-public void setTime(double newTime) { // sätter ett nytt tid av simulatorn.
+public void setTime(double newTime) { // sätter ett nytt tid på simulatorn.
 	this.timePassed = newTime;
 }
 }
