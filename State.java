@@ -1,4 +1,4 @@
-package lab5.general;
+package general;
 
 import java.util.Observable;
 
