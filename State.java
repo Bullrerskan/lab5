@@ -11,23 +11,23 @@ import java.util.Observable;
 
 public class State extends Observable {
 
-private boolean emergencyStop = false;
-private double time;
+private boolean simStop = false;
+private double timePassed;
 
 
 public State(){
-	this.time = 0;
+	this.timePassed = 0;
 }
 
-public boolean getEmergencyStop(){ //returnerar nˆdbromsens n‰r det ‰r dags att sluta.
-	return emergencyStop;
+public boolean simStop(){ //returnerar simStop n√§r det √§r dags att sluta.
+	return simStop();
 }
 
-public double getTime() { // returnerar tiden.
-	return time;
+public double timePassed() { // returnerar tiden som har g√•tt.
+	return timePassed;
 }
 
-public void setTime(double newTime) { // s‰tter ett nytt tid av simulatorn 
-	this.time = newTime;
+public void setTime(double newTime) { // s√§tter ett nytt tid av simulatorn.
+	this.timePassed = newTime;
 }
 }
