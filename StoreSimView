@@ -1,0 +1,20 @@
+package general.store;
+
+import java.util.Observable;
+import java.util.Observer;
+
+import general.State;
+ 
+public class StoreSimView implements Observer {
+
+	private State state;
+	
+	public StoreSimView(){
+		state.addObserver(this);
+	}
+
+	@Override
+	public void update(Observable arg0, Object M) {
+		
+	}
+}
